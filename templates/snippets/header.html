@@ -1,0 +1,28 @@
+{% macro generate(page) -%}
+<!--header -->
+<header>
+    <h1><a href="#page_1">Code4Lib 2015</a></h1>
+    <nav>
+	<ul class="menu">
+		<li {% if page == 2 %}class="active"{% endif %}>
+                  <a href="#page_2">{% if page > 4 %}CPP{% else %}Pull Platform{% endif %}</a>
+                </li>
+		<li {% if page == 3 %}class="active"{% endif %}>
+                  <a href="#page_3">Catalog</a>
+                </li>
+		<li {% if page == 4 %}class="active"{% endif %}>
+                  <a href="#page_4">{% if page > 4 %}Server{% else %}Semantic Server{% endif %}</a>
+                </li>
+                {% if page > 4 %}
+        	<li {% if page == 5 %}class="active"{% endif %}>
+                  <a href="#page_5">FAQ</a>
+                </li>
+        	<li {% if page == 6 %}class="active"{% endif %}>
+                  <a href="#page_6">Contacts</a>
+                </li>
+                {% endif %}
+	</ul>
+    </nav>
+</header>
+<!--header end-->
+{%- endmacro %}
