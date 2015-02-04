@@ -11,6 +11,7 @@ from flask import Flask, render_template
 talk = Flask(__name__)
 
 @talk.route("/")
+@talk.route("/index.html")
 def index():
     return render_template("index.html")
 
