@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title></title>
+  <title>Code4Lib 2015 Lightning Talk</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}" type="text/css" media="all">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}" type="text/css" media="all">
@@ -29,7 +29,24 @@
 			<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0"  alt="" /></a>
 		</div>
 	<![endif]-->
+  <style>
+    blockquote {
+      background-color: white;
+      color: black;
+      font-size: .95em;
+      font-weight: bold;
+      margin-left: .75em;
+      margin-right: 1.5em;
+      padding: .5em;
+      width: 95%;
+    }
 
+    .abstract {
+       font-size: 1.3em; 
+       padding: 1.5em"
+    }
+  
+  </style>
 </head>
 
 <body>
@@ -110,47 +127,18 @@
 	<div id="page_6">
 		<div class="main zerogrid">
                  {{ header.generate(6) }}
-			<!--content -->
-			<section class="content">
-				<article class="col-1-3">
-					<h2>Miscellaneous Info</h2>
-					<p>Lorem ipsum dolor sit amet, consect- etuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullam.</p>
-					<p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volut- pat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullam.</p>
-        		</article>
-				<article class="col-1-3">
-					<h2>Contact Form</h2>
-					<form id="ContactForm" method="post">
-							<div>
-								<div class="wrapper"><input class="input" type="text" value="Name:"  onblur="if(this.value=='') this.value='Name:'" onFocus="if(this.value =='Name:' ) this.value=''" ></div>
-								<div class="wrapper"><input class="input" type="text" value="Email:"  onblur="if(this.value=='') this.value='Email:'" onFocus="if(this.value =='Email:' ) this.value=''" ></div>
-								<div class="wrapper"><input class="input" type="text" value="Fax:"  onblur="if(this.value=='') this.value='Fax:'" onFocus="if(this.value =='Fax:' ) this.value=''"></div>
-								<div class="textarea_box"><textarea cols="1" rows="1" onBlur="if(this.value=='') this.value='Message:'" onFocus="if(this.value =='Message:' ) this.value=''"  >Message:</textarea></div>
-								<a href="javascript:" class="button" onClick="document.getElementById('ContactForm').reset()">clear</a>
-								<a href="javascript:" class="button" onClick="document.getElementById('ContactForm').submit()">send</a>
-							</div>
-					</form>
-        		</article>
-				<article class="col-1-3">
-					<h2>Our Location</h2>
-					<p>Company Name Inc. 8901 Marmora<br>
-							Road,Glasgow, D04 89GR.</p>
-					<p> <span class="right">+1 800 559 6580</span><strong class="color1">Freephone:</strong><br>
-						<span class="right">+1 959 603 6035</span><strong class="color1">Telephone:</strong><br>
-						<span class="right">+1 101 889 9898</span><strong class="color1">FAX:</strong><br>
-						<span class="right"><a href="mailto:">mail@business.com</a></span>	<strong class="color1">E-mail:</strong></p>
-        		</article>
-			</section>
-			<!--content end-->
+                 {% include 'snippets/contacts.html' %}
 		</div>
 		<div class="block2"></div>
 	</div>
 </div>
+{% block footer %}
 	<div class="main zerogrid">
 			<!--footer -->
 			<footer class="footer_end">
 				<div class="wrapper">
 					<ul class="icons">
-						<li><a href="#" class="normaltip" title="Facebook"><img src="images/icon1.jpg" alt=""></a></li>
+						<li><a href="#" class="normaltip" title="Facebook"><img src="{{ url_for('static', filename='images/icon1.jpg') }}" alt=""></a></li>
 						<li><a href="#" class="normaltip" title="Delicious"><img src="images/icon2.jpg" alt=""></a></li>
 						<li><a href="#" class="normaltip" title="Stumble Upon"><img src="images/icon3.jpg" alt=""></a></li>
 						<li><a href="#" class="normaltip" title="Twitter"><img src="images/icon4.jpg" alt=""></a></li>
@@ -162,6 +150,7 @@
 			</footer>
 			<!--footer end-->
 	</div>
+{% endblock %}
 <script type="text/javascript"> Cufon.now(); </script>
 </body>
 </html>

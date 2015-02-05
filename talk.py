@@ -6,17 +6,22 @@ Licence:     GPLv3
 __author__ = "Jeremy Nelson"
 __license__ = "GPLv3"
 
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 
-talk = Flask(__name__)
+app = Flask(__name__)
 
-@talk.route("/")
-@talk.route("/index.html")
+@app.route("/contact", methods=['POST'])
+def contact():
+    return "IN Contact"
+##    return redirect(url_for('index'))
+
+@app.route("/")
+@app.route("/index.html")
 def index():
     return render_template("index.html")
 
 def main():
-    talk.run(host='0.0.0.0', port=20150, debug=True)
+    app.run(host='0.0.0.0', port=20150, debug=True)
 
 if __name__ == '__main__':
     main()

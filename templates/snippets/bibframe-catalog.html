@@ -1,11 +1,20 @@
+<p class="abstract">
+In the fall of 2014, Jeremy Nelson and Aaron Schmidt of 
+<a href="http://weareinflux.com/">Influx Library User Experience</a>, 
+successfully bid on a Library of Congress contract for a BIBFRAME Search and Display System. 
+This new system - called <a href="">BIBFRAME Catalog</a> for short - is built from loosely coupled 
+components from the <a href="#page_1">Catalog Pull Platform</a>. 
+</p>
 <!--content -->
 <section class="content">
     <img style="background-color: white" src="{{ url_for('static', filename='images/bibframe-search-display-system.svg') }}">
     <h2>BIBFRAME Catalog &amp; Datastore</h2>
-
+    
 	<article class="col-1-2">
 		<div class="wrapper pad_bot1">
-			<figure class="left marg_right1"><a href="#"><img src="" alt=""></a></figure>
+			<figure class="left marg_right1">
+                            <a href="http://loc.gov"><img src="{{ url_for('static', filename='images/loc-logo-sm.png') }}" alt=""></a>
+                        </figure>
 			<p class="pad_bot1"><strong class="color1">Library of Congress</strong></p>
 			<p>
                          <a href="http://bibframe.org">BIBFRAME</a> is the Library of Congress's 
@@ -20,20 +29,32 @@
 		<div class="wrapper pad_bot1">
 			<figure class="left marg_right1"><a href="#"><img src="images/page2_img2.png" alt=""></a></figure>
 			<p class="pad_bot1"><strong class="color1">Search Display System RFQ</strong></p>
-			<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore euugiat nulla pariatur.</p>
+			<p>In August 2014, the Library of Congress issued a RFQ for</p>
+                        <blockquote>
+                          ...a working demonstration of a 
+                          BIBFRAME search and display tool for community stakeholders and to make the resulting code 
+                          available for free download so that developers can experiment
+                          with and build on the tool.
+                        </blockquote>
+
 		</div>
+                <hr>
 		<div class="wrapper pad_bot1">
-			<figure class="left marg_left1" style="background-color: black">
+			<figure class="right marg_right1" style="background-color: black">
                           <a href="http://weareinflux.com/">
                            <img src="{{ url_for('static', filename='images/influx_logo_sm.png') }}" alt=""></a>
                         </figure>
-			<p class="pad_bot1"><strong class="color1">Influx Design</strong></p>
-			<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorem- que laudantium, totam rem aperiam.</p>
+			<p class="pad_bot1"><strong class="color1">Influx Library User Interface Design</strong></p>
+                        <p>Influx Library User Experience is a full service design and development firm committed to 
+                           helping make great libraries. Aaron Schmidt of Influx has presented internationally on 
+                           the topics of library user experience and website usability. He currently is a lecturer 
+                           at the San Jose State University School of Library and Information Science, and is a 
+                           columnist for Library Journal.</p>
 		</div>
     	</article>
 	<article class="col-1-2">
 		<div class="wrapper pad_bot1">
-			<figure class="left marg_right1"><a href="#"><img src="images/page2_img5.png" alt=""></a></figure>
+			<figure class="left marg_right1"><a href="#"><img src="{{ url_for('static', filename='images/bml-loop.svg') }}" alt=""></a></figure>
 			<p class="pad_bot1"><strong class="color1"><em>Build</em>-Measure-Learn</strong></p>
 			<p>The BIBFRAME Catalog project is in its starting its second iteration of Build-Measure-Learn loop. 
 
@@ -50,7 +71,7 @@
                         </p>
 		</div>
 		<div class="wrapper pad_bot1">
-			<figure class="left marg_right1"><a href="#"><img src="images/page2_img6.png" alt=""></a></figure>
+			<figure class="left marg_right1"><a href="#"><img src="{{ url_for('static', filename='images/bf-logo.png') }}" alt=""></a></figure>
 			<p class="pad_bot1"><strong class="color1">BIBFRAME Datastore</strong></p>
 			<p>Sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
 		</div>
