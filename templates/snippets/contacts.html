@@ -16,26 +16,32 @@
         </p>
     </article>
     <article class="col-1-3">
-        
 	<h2>Contact Form</h2>
+        {% if messages %}
+         {% for message in messages %}
+         <p>{{ message }}</p>
+         {% endfor %}
+        {% else %}
 	<form id="ContactForm" method="post" action="{{ url_for('contact') }}">
 	    <div>
 		<div class="wrapper">
                     <input class="input" type="text" value="Name:"  onblur="if(this.value=='') this.value='Name:'" 
-                           onFocus="if(this.value =='Name:' ) this.value=''" >
+                           onFocus="if(this.value =='Name:' ) this.value=''" name="name">
                 </div>
 		<div class="wrapper">
-                    <input class="input" type="text" value="Email:"  
+                    <input class="input" type="text" value="Email:"  name="email"
                        onblur="if(this.value=='') this.value='Email:'" onFocus="if(this.value =='Email:' ) this.value=''" >
                 </div>
 		<div class="wrapper">
-                    <input type="checkbox" value="no"></input> Signup for email newsletter
+                    <input type="checkbox" value="no" name="signup"></input> Signup for the Catalog Pull Platform email newsletter
                 </div>
-		<div class="textarea_box"><textarea cols="1" rows="1" onBlur="if(this.value=='') this.value='Message:'" onFocus="if(this.value =='Message:' ) this.value=''"  >Message:</textarea></div>
+		<div class="textarea_box"><textarea name="comment" cols="1" rows="1" onBlur="if(this.value=='') this.value='Message:'" onFocus="if(this.value =='Message:' ) this.value=''"  >Message:</textarea></div>
 		<a href="javascript:" class="button" onClick="document.getElementById('ContactForm').reset()">clear</a>
-		<a href="javascript:" class="button" onClick="document.getElementById('ContactForm').submit()">send</a>
+                <input type="submit" class="button" value="send">
+		{#<a href="javascript:" class="button" onClick="document.getElementById('ContactForm').submit()">send</a>#}
 	</div>
 	</form>
+        {% endif %}
     </article>
     <article class="col-1-3">
 	<h2>Jeremy Nelson</h2>

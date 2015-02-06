@@ -28,7 +28,19 @@
                          </figure>
 			<p class="pad_bot1"><strong class="font1">Elastic Search &amp; Fuseki</strong></p>
 			<p class="pad_bot3">Elastic Search is used for real-time search by indexing the JSON-LD serialization of 
-                         the RDF subject graphs stored in Fedora. </p>
+			    the RDF subject graphs stored in Fedora. All BIBFRAME resources, including Works, 
+			    Authorities, Annotations, and Instances are indexed into Elastic Search 
+			    using their JSON-LD serialization. The BIBFRAME RDF graphs are retrieved 
+			    from the Fedora repository giving the Semantic Server the ability to leverage 
+			    the rich Elastic Search ecosystem. </p>
+                        <p class="pad_bot3">
+                            Apache Fuseki, a full-featured
+			    SPARQL endpoint enhances the functionality and utility of Fedora 4 as a Linked Data
+			    platform for such uses in the BIBFRAME Catalog as Resource de-duplication. Fuseki and
+			    Fedora 4 also allow for inference querying and enhancing the possibilities of sharing 
+			    linked-data resources at external sources like the Library of
+			    Congress, OCLC, OpenLibrary, and the Libhub initiative for shared BIBFRAME resources. 
+                        </p>
 			<a href="http://www.elasticsearch.org/" class="button">website</a>
 		</div>
     </article>
@@ -47,8 +59,11 @@
 	<div class="wrapper pad_top1 pad_bot2">
 		<figure class="pad_bot3"><a href="#"><img src="{{ url_for('static', filename='images/page3_img4.jpg') }}" alt=""></a></figure>
 		<p class="pad_bot1"><strong class="font1">Next steps</strong></p>
-		<p class="pad_bot3">Nemo enim ipsam voluptatem voluptas sit aspernatur aut oditaut.</p>
-		<a href="#" class="button">read more</a>
+		<p class="pad_bot3">
+                  After the standalone version of the BIBFRAME Catalog and Datastore is complete, the semantic server will
+                  expand to include more analytic and cache support for tracking, analyzing, and visualizing the use and usage
+                  of BIBFRAME and other resources.
+                </p>
 	</div>
     </article>
     <article class="col-1-3">
@@ -64,40 +79,45 @@
                         </p>
 			<a href="https://github.com/jermnelson/BIBFRAME-Datastore" class="button">Github</a>
 		</div>#}
-		<div class="wrapper pad_top1 pad_bot2">
-			<figure class="pad_bot3"><a href="#"><img src="{{ url_for('static', filename='images/tiger-logo.png') }}" alt=""></a></figure>
-			<p class="pad_bot1"><strong class="font1">Colorado College's TIGER Catalog</strong></p>
-			<p class="pad_bot3">
-                         As an ongoing experiment for replacing Colorado College's legacy ILS, the first
-                         <a href="http://catalog.coloradocollege.edu">TIGER Catalog Minimum Viable Product</a> was released in 2014 using
-                         Aaron Schmidt's design outlined in a <a href="#">blog posting</a>. This first iteration uses 
-                         <a href="http://flask.pocoo.org/">Flask</a>, <a href="">Solr</a>, with all of Colorado College's MARC21 records
-                         serialized as JSON documents in <a href="">MongoDB</a>.
-                        </p>
-                        <p>
-                         Current TIGER development is pivoting to the Semantic Server for improving the operations and analytics 
-                         for assessment, discoverable, and accessibility of Colorado College
-                         Library's collections stored currently as MARC records, Fedora 3 digital repositories, and a large number 
-                         of journal databases and resources. 
-                        </p>
-			<a href="http://catalog.coloradocollege.edu" class="button">Website</a>
-                	<a href="https://github.com/Tutt-Library/tiger-catalog/" class="button">Github</a>
+	<div class="wrapper pad_top1 pad_bot2">
+	    <figure class="pad_bot3">
+               <a href="http://catalog.coloradocollege.edu">
+                 <img src="{{ url_for('static', filename='images/cc-tiger-logo.png') }}" alt=""
 
-		</div>
+               ></a>
+            </figure>
+		<p class="pad_bot1"><strong class="font1">Colorado College's TIGER Catalog</strong></p>
+		<p class="pad_bot3">
+		 As an ongoing experiment for replacing Colorado College's legacy ILS, the first
+		 <a href="http://catalog.coloradocollege.edu">TIGER Catalog Minimum Viable Product</a> was released in 2014 using
+		 Aaron Schmidt's design outlined in a <a href="#">blog posting</a>. This first iteration uses 
+		 <a href="http://flask.pocoo.org/">Flask</a>, <a href="https://lucene.apache.org/solr/">Solr</a>, with all of Colorado College's MARC21 records
+		 serialized as JSON documents in <a href="https://www.mongodb.org/">MongoDB</a>.
+		</p>
+		<p>
+		 Current TIGER development is pivoting to the Semantic Server for improving the operations and analytics 
+		 for assessment, discoverable, and accessibility of Colorado College
+		 Library's collections stored currently as MARC records, Fedora 3 digital repositories, and a large number 
+		 of journal databases and resources. 
+		</p>
+		<a href="http://catalog.coloradocollege.edu" class="button">Website</a>
+		<a href="https://github.com/Tutt-Library/tiger-catalog/" class="button">Github</a>
 
-		<div class="wrapper pad_top1 pad_bot2">
-			<figure class="pad_bot3"><a href="#"><img src="{{ url_for('static', filename='images/islandora-badges.png') }}" alt=""></a></figure>
-			<p class="pad_bot1"><strong class="font1">Islandora eBadges</strong></p>
-			<p class="pad_bot3">Nemo enim ipsam voluptatem voluptas sit aspernatur aut oditaut.</p>
-			<a href="#" class="button">Github</a>
-		</div>
-		<div class="wrapper pad_top1 pad_bot2">
-			<figure class="pad_bot3"><a href="#"><img src="images/page3_img6.jpg" alt=""></a></figure>
-			<p class="pad_bot1"><strong class="font1">Colorado College Fedora 3.+/Islandora Migration</strong></p>
-			<p class="pad_bot3">Nemo enim ipsam voluptatem voluptas sit aspernatur aut oditaut.</p>
-			<a href="https://github.com/Tutt-Library/migration.git" class="button">Github</a>
-		</div>
-
+	    </div>
+	 <div class="wrapper pad_top1 pad_bot2">
+		<figure class="pad_bot3"><a href="https://github.com/Islandora/Islandora-eBadges-Repository">
+                  <img src="{{ url_for('static', filename='images/islandora-badges.png') }}" alt=""></a>
+                </figure>
+		<p class="pad_bot1"><strong class="font1">Islandora eBadges</strong></p>
+		<p class="pad_bot3">
+                 A Flask application being developed for the Islandora.ca foundation to issue  Mozilla 
+                 <a href="http://openbadges.org/ ">Open Badges</a> for camps, special 
+                 projects, and other types of educational and training events. Badge information and individually 
+                 issued badge images are stored in an embedded semantic server using Schema.org and OpenBadges
+                 linked data. 
+                </p>
+		<a href="#" class="button">Github</a>
+	</div>
     </article>
 </section>
 <!--content end-->
