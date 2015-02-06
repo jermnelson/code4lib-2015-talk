@@ -53,12 +53,38 @@
     </article>
     <article class="col-1-3">
         <h2>Using the Semantic Server</h2>
-		<div class="wrapper pad_top1 pad_bot2">
+	{#	<div class="wrapper pad_top1 pad_bot2">
 			<figure class="pad_bot3"><a href="#"><img src="{{ url_for('static', filename='images/bf-logo.png') }}" alt=""></a></figure>
-			<p class="pad_bot1"><strong class="font1">BIBFRAME Datastore</strong></p>
-			<p class="pad_bot3">Nemo enim ipsam voluptatem voluptas sit aspernatur aut oditaut.</p>
-			<a href=" " class="button">Github</a>
+			<p class="pad_bot1"><strong class="font1">BIBFRAME Catalog &amp; Datastore</strong></p>
+			<p class="pad_bot3">
+                         The BIBFRAME Catalog directly uses the BIBFRAME Datastore's REST API that 
+                          extends the <a href="#page_4">Semantic Server's</a> 
+                         REST APIs for analytics, CRUD, and machine learning operations on the underlying Fedora 4, Elastic Search, 
+                         and Fuseki services.
+                        </p>
+			<a href="https://github.com/jermnelson/BIBFRAME-Datastore" class="button">Github</a>
+		</div>#}
+		<div class="wrapper pad_top1 pad_bot2">
+			<figure class="pad_bot3"><a href="#"><img src="{{ url_for('static', filename='images/tiger-logo.png') }}" alt=""></a></figure>
+			<p class="pad_bot1"><strong class="font1">Colorado College's TIGER Catalog</strong></p>
+			<p class="pad_bot3">
+                         As an ongoing experiment for replacing Colorado College's legacy ILS, the first
+                         <a href="http://catalog.coloradocollege.edu">TIGER Catalog Minimum Viable Product</a> was released in 2014 using
+                         Aaron Schmidt's design outlined in a <a href="#">blog posting</a>. This first iteration uses 
+                         <a href="http://flask.pocoo.org/">Flask</a>, <a href="">Solr</a>, with all of Colorado College's MARC21 records
+                         serialized as JSON documents in <a href="">MongoDB</a>.
+                        </p>
+                        <p>
+                         Current TIGER development is pivoting to the Semantic Server for improving the operations and analytics 
+                         for assessment, discoverable, and accessibility of Colorado College
+                         Library's collections stored currently as MARC records, Fedora 3 digital repositories, and a large number 
+                         of journal databases and resources. 
+                        </p>
+			<a href="http://catalog.coloradocollege.edu" class="button">Website</a>
+                	<a href="https://github.com/Tutt-Library/tiger-catalog/" class="button">Github</a>
+
 		</div>
+
 		<div class="wrapper pad_top1 pad_bot2">
 			<figure class="pad_bot3"><a href="#"><img src="{{ url_for('static', filename='images/islandora-badges.png') }}" alt=""></a></figure>
 			<p class="pad_bot1"><strong class="font1">Islandora eBadges</strong></p>
